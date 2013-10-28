@@ -1,6 +1,6 @@
 [Transloadit](https://addons.heroku.com/transloadit) is an [add-on](https://addons.heroku.com) for file uploading & importing, video & audio encoding, image manipulation, watermarking, document conversion and a lot more.
 
-![Transloadit Uploads](https://static.transloadit.com/getting_started_2.png "Transloadit in one Image")
+![Transloadit Uploads](https://s3.amazonaws.com/heroku.devcenter/heroku_assets/images/235-original.jpg "Upload any file with Transloadit")
 
 Dealing with hundreds of different media formats and running a scalable architecture
 that can encode even the biggest files swiftly is no joke. Transloadit has spent
