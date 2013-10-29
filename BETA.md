@@ -1,7 +1,7 @@
 Hi there,
 
-thanks for partaking in our private beta!
-Here are the steps to partake in our private beta, and make sure it works.
+thanks for taking an interest in our private beta!
+Here are the steps to partake, and make sure it works using an example ruby app.
 
 ## Join the Heroku Beta program
 
