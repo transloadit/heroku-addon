@@ -2,13 +2,13 @@
 
 [https://addons.heroku.com/transloadit](https://addons.heroku.com/transloadit)
 
-A **Heroku addon** for [Transloadit](https://transloadit.com)'s file uploading and encoding service
+An **Heroku addon** for [Transloadit](https://transloadit.com)'s file uploading and encoding service
 
 ## Intro
 
 [Transloadit](https://transloadit.com) is a service that helps you handle file uploads, resize, crop and watermark your images, make GIFs, transcode your videos, extract thumbnails, generate audio waveforms, and so much more. In short, [Transloadit](https://transloadit.com) is the Swiss Army Knife for your files.
 
-[this](https://addons.heroku.com/transloadit) is an [add-on](https://addons.heroku.com) to make it easy to talk to the [Transloadit](https://transloadit.com) REST API.
+[This](https://addons.heroku.com/transloadit) is an Heroku [add-on](https://addons.heroku.com) to make it easy to talk to the [Transloadit](https://transloadit.com) REST API.
 
 ![Transloadit Uploads](https://s3.amazonaws.com/heroku.devcenter/heroku_assets/images/235-original.jpg "Upload any file with Transloadit")
 
@@ -42,12 +42,12 @@ $ heroku config:get TRANSLOADIT_AUTH_KEY
 With your `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` in place you can now integrate it with the SDK corresponding to 
 your project. Here's a list of our SDKs:
 
-- [Go](https://github.com/transloadit/go-sdk)
-- [Java](https://github.com/transloadit/java-sdk)
-- [Node.js](https://github.com/transloadit/node-sdk)
-- [PHP](https://github.com/transloadit/php-sdk)
-- [Rails](https://github.com/transloadit/rails-sdk)
-- [Ruby](https://github.com/transloadit/ruby-sdk)
+- [Go SDK](https://github.com/transloadit/go-sdk)
+- [Java SDK](https://github.com/transloadit/java-sdk)
+- [Node.js SDK](https://github.com/transloadit/node-sdk)
+- [PHP SDK](https://github.com/transloadit/php-sdk)
+- [Rails SDK](https://github.com/transloadit/rails-sdk)
+- [Ruby SDK](https://github.com/transloadit/ruby-sdk)
 
 ### Using with Ruby (Uses our Ruby SDK)
 
@@ -112,7 +112,7 @@ else
 end
 ```
 
-### Using with Ruby on Rails (Uses or Rails SDK)
+### Using with Ruby on Rails (Uses our Rails SDK)
 
 Here we'll show how to use transloadit in a freshly
 setup rails project and Heroku app.
