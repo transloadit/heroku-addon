@@ -49,7 +49,7 @@ your project. Here's a list of our SDKs:
 - [Rails](https://github.com/transloadit/rails-sdk)
 - [Ruby](https://github.com/transloadit/ruby-sdk)
 
-### Using with Ruby <sub>*(Uses our Ruby SDK)*</sub>
+### Using with Ruby (Uses our Ruby SDK)
 
 Verify that the `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` variables are set.
 
@@ -112,7 +112,7 @@ else
 end
 ```
 
-### Using with Ruby on Rails <sub>*(Uses or Rails SDK)*</sub>
+### Using with Ruby on Rails (Uses or Rails SDK)
 
 Here we'll show how to use transloadit in a freshly
 setup rails project and Heroku app.
