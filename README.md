@@ -1,4 +1,14 @@
-[Transloadit](https://addons.heroku.com/transloadit) is an [add-on](https://addons.heroku.com) for file uploading & importing, video & audio encoding, image manipulation, watermarking, document conversion and a lot more.
+## heroku-addon
+
+[https://addons.heroku.com/transloadit](https://addons.heroku.com/transloadit)
+
+An **Heroku addon** for [Transloadit](https://transloadit.com)'s file uploading and encoding service
+
+## Intro
+
+[Transloadit](https://transloadit.com) is a service that helps you handle file uploads, resize, crop and watermark your images, make GIFs, transcode your videos, extract thumbnails, generate audio waveforms, and so much more. In short, [Transloadit](https://transloadit.com) is the Swiss Army Knife for your files.
+
+[This](https://addons.heroku.com/transloadit) is an Heroku [add-on](https://addons.heroku.com) to make it easy to talk to the [Transloadit](https://transloadit.com) REST API.
 
 ![Transloadit Uploads](https://s3.amazonaws.com/heroku.devcenter/heroku_assets/images/235-original.jpg "Upload any file with Transloadit")
 
@@ -7,18 +17,18 @@ that can encode even the biggest files swiftly is no joke. Transloadit has spent
 the last 4 years perfecting this and abstracting all this complexity into one
 beatifully flexible and easy to use API.
 
-## Provisioning the add-on
+## Install
 
 Transloadit can be attached to a Heroku application via the CLI:
-
-<div class="callout">
-A list of all plans available can be found <a href="https://addons.heroku.com/transloadit">here</a>.
-</div>
 
 ```bash
 $ heroku addons:add transloadit
 -----> Adding transloadit to sharp-mountain-4005... done, v18 (free)
 ```
+
+<div class="callout">
+A list of all plans available can be found <a href="https://addons.heroku.com/transloadit">here</a>.
+</div>
 
 Once Transloadit has been added the `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` settings will be available in the app configuration and will contain the credentials needed to authenticate to the [Transloadit API](https://transloadit.com/docs/api-docs). This can be confirmed using the `heroku config:get` command.
 
@@ -27,7 +37,19 @@ $ heroku config:get TRANSLOADIT_AUTH_KEY
 4bba21cf6d744fd1aeef0f0b72ec3212
 ```
 
-## Using with Ruby
+## Usage
+
+With your `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` in place you can now integrate it with any of our SDKs corresponding to
+your project. Here's a list of our SDKs:
+
+- [Go SDK](https://github.com/transloadit/go-sdk)
+- [Java SDK](https://github.com/transloadit/java-sdk)
+- [Node.js SDK](https://github.com/transloadit/node-sdk)
+- [PHP SDK](https://github.com/transloadit/php-sdk)
+- [Rails SDK](https://github.com/transloadit/rails-sdk)
+- [Ruby SDK](https://github.com/transloadit/ruby-sdk)
+
+### Using with Ruby (Uses our Ruby SDK)
 
 Verify that the `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` variables are set.
 
@@ -51,7 +73,7 @@ $ git commit -a -m "add transloadit instrumentation"
 $ git push heroku master
 ```
 
-### First encoding job
+#### First encoding job
 
 After installing the `transloadit` gem and deploying your app you can start talking to
 the [Transloadit API](https://transloadit.com/docs/api-docs):
@@ -90,7 +112,7 @@ else
 end
 ```
 
-## Using with Ruby on Rails
+### Using with Ruby on Rails (Uses our Rails SDK)
 
 Here we'll show how to use transloadit in a freshly
 setup rails project and Heroku app.
@@ -259,7 +281,7 @@ $ heroku open && heroku logs --tail
 
 Point your browser to `/uploads/new`
 
-## Using with any Language
+### Using with any Language
 
 Instead of talking server-to-server, your website visitors can directly upload
 to Transloadit's specialized upload servers, so in theory there's no need for
