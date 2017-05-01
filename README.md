@@ -39,7 +39,7 @@ $ heroku config:get TRANSLOADIT_AUTH_KEY
 
 ## Usage
 
-With your `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` in place you can now integrate it with the SDK corresponding to 
+With your `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` in place you can now integrate it with any of our SDKs corresponding to
 your project. Here's a list of our SDKs:
 
 - [Go SDK](https://github.com/transloadit/go-sdk)
