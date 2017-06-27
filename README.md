@@ -49,7 +49,36 @@ your project. Here's a list of our SDKs:
 - [Rails SDK](https://github.com/transloadit/rails-sdk)
 - [Ruby SDK](https://github.com/transloadit/ruby-sdk)
 
-### Using with Ruby (Uses our Ruby SDK)
+## Migrating between plans
+
+As long as the plan you are migrating to includes enough allocated measurements for your usage, you can migrate between plans at any time without any interruption to your encoding.
+
+Use the `heroku addons:upgrade` command to migrate to a new plan.
+
+```bash
+$ heroku addons:upgrade transloadit:enterprise
+-----> Upgrading transloadit:enterprise to sharp-mountain-4005... done, v18 ($299/mo)
+       Your plan has been updated to: transloadit:enterprise
+```
+
+## Removing the add-on
+
+Transloadit can be removed via the CLI.
+
+<div class="warning">This will destroy all associated data and cannot be undone!</div>
+
+```bash
+$ heroku addons:remove transloadit
+-----> Removing transloadit from sharp-mountain-4005... done, v20 (free)
+```
+
+## Support
+
+All Transloadit support and runtime issues should be submitted via one of the [Heroku Support channels](support-channels). Any non-support related issues or product feedback for Transloadit is welcome via [email](mailto:support@transloadit.com).
+
+
+
+## Using with Ruby (Uses our Ruby SDK)
 
 Verify that the `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` variables are set.
 
@@ -112,7 +141,7 @@ else
 end
 ```
 
-### Using with Ruby on Rails (Uses our Rails SDK)
+## Using with Ruby on Rails (Uses our Rails SDK)
 
 Here we'll show how to use transloadit in a freshly
 setup rails project and Heroku app.
@@ -281,7 +310,7 @@ $ heroku open && heroku logs --tail
 
 Point your browser to `/uploads/new`
 
-### Using with any Language
+## Using with any Language
 
 Instead of talking server-to-server, your website visitors can directly upload
 to Transloadit's specialized upload servers, so in theory there's no need for
@@ -304,29 +333,6 @@ to our API.
 </script>
 ```
 
-## Migrating between plans
+## Documentation
 
-As long as the plan you are migrating to includes enough allocated measurements for your usage, you can migrate between plans at any time without any interruption to your encoding.
-
-Use the `heroku addons:upgrade` command to migrate to a new plan.
-
-```bash
-$ heroku addons:upgrade transloadit:enterprise
------> Upgrading transloadit:enterprise to sharp-mountain-4005... done, v18 ($299/mo)
-       Your plan has been updated to: transloadit:enterprise
-```
-
-## Removing the add-on
-
-Transloadit can be removed via the CLI.
-
-<div class="warning">This will destroy all associated data and cannot be undone!</div>
-
-```bash
-$ heroku addons:remove transloadit
------> Removing transloadit from sharp-mountain-4005... done, v20 (free)
-```
-
-## Support
-
-All Transloadit support and runtime issues should be submitted via one of the [Heroku Support channels](support-channels). Any non-support related issues or product feedback for Transloadit is welcome via [email](mailto:support@transloadit.com).
+See <a href="https://github.com/transloadit/heroku-addon/blob/master/README.md">GitHub</a> for the full documentation.
