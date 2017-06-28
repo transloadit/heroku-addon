@@ -86,8 +86,8 @@ puts "Resizing lolcat.jpg on #{ENV['TRANSLOADIT_URL']}"
 
 transloadit = Transloadit.new(
   :service => ENV['TRANSLOADIT_URL'],
-  :key     => ENV['YOUR_TRANSLOADIT_AUTH_KEY'],
-  :secret  => ENV['YOUR_TRANSLOADIT_SECRET_KEY']
+  :key     => ENV['TRANSLOADIT_AUTH_KEY'],
+  :secret  => ENV['TRANSLOADIT_SECRET_KEY']
 )
 
 resize = transloadit.step 'resize', '/image/resize',
