@@ -73,7 +73,7 @@ $ git commit -a -m "add transloadit instrumentation"
 $ git push heroku master
 ```
 
-#### First encoding job
+### First encoding job
 
 After installing the `transloadit` Gem and deploying your app you can start talking to
 the [Transloadit API](https://transloadit.com/docs/api-docs/):
