@@ -75,7 +75,7 @@ $ git push heroku master
 
 #### First encoding job
 
-After installing the `transloadit` gem and deploying your app you can start talking to
+After installing the `transloadit` Gem and deploying your app you can start talking to
 the [Transloadit API](https://transloadit.com/docs/api-docs/):
 
 
@@ -86,8 +86,8 @@ puts "Resizing lolcat.jpg on #{ENV['TRANSLOADIT_URL']}"
 
 transloadit = Transloadit.new(
   :service => ENV['TRANSLOADIT_URL'],
-  :key     => ENV['TRANSLOADIT_AUTH_KEY'],
-  :secret  => ENV['TRANSLOADIT_SECRET_KEY']
+  :key     => ENV['YOUR_TRANSLOADIT_AUTH_KEY'],
+  :secret  => ENV['YOUR_TRANSLOADIT_SECRET_KEY']
 )
 
 resize = transloadit.step 'resize', '/image/resize',
@@ -114,8 +114,8 @@ end
 
 ### Using with Ruby on Rails (Uses our Rails SDK)
 
-Here we'll show how to use transloadit in a freshly
-setup rails project and Heroku app.
+Here we'll show how to use Transloadit in a freshly
+setup Rails project and Heroku app.
 
 If you haven't already done so, go ahead and install Rails.
 
@@ -123,14 +123,14 @@ If you haven't already done so, go ahead and install Rails.
 $ gem install rdoc rails
 ```
 
-With rails installed, let's create a new app called 'transloku'.
+With Rails installed, let's create a new app called 'transloku'.
 
 ```bash
 $ rails new transloku
 $ cd transloku
 ```
 
-In order to use transloadit in this app, we need to add the gem to our Gemfile
+In order to use Transloadit in this app, we need to add the Gem to our Gemfile
 and bundle things up.
 
 Remove `sqlite3` from your Gemfile
@@ -143,7 +143,7 @@ $ bundle install
 ```
 
 With that in place, it's time to generate our Transloadit configuration, as
-well as a basic UploadsController and a dummy Upload model.
+well as a basic `UploadsController` and a dummy `Upload` model.
 
 ```bash
 $ rails g transloadit:install
@@ -235,9 +235,9 @@ to render the uploaded and resized image:
 <%= image_tag params[:transloadit][:results][:resize].first[:url] %>
 ```
 
-In order to use the transloadit params in your controller and views you
-have to include the ParamsDecoder into your controller. Let's do that for our
-UploadsController.
+In order to use the `transloadit` params in your controller and views you
+have to include the `ParamsDecoder` into your controller. Let's do that for our
+`UploadsController`.
 
 Open up `app/controllers/uploads_controller.rb` and adapt it like that:
 
@@ -288,14 +288,14 @@ to Transloadit's specialized upload servers, so in theory there's no need for
 serverside languages.
 
 The easiest way to accomplish this would be to to include our
-[jQuery SDK](https://transloadit.com/docs#jquery-plugin) in your HTML.
+[jQuery SDK](https://transloadit.com/docs/#jquery-plugin) in your HTML.
 
 It includes a Twitter Bootstrap compatible progress bar, and it saves you
 development time having to handle the file uploads yourself, and then pushing it
 to our API.
 
 ```html
-<script type="text/javascript" src="//assets.transloadit.com/js/jquery.transloadit2-v2-latest.js"></script>
+<script type="text/javascript" src="//assets.transloadit.com/js/jquery.transloadit2-v3-latest.js"></script>
 <script type="text/javascript">
    // We call .transloadit() after the DOM is initialized:
    $(function() {
@@ -303,6 +303,8 @@ to our API.
    });
 </script>
 ```
+
+Alternatively, check our [Uppy](https://transloadit.com/docs/#uppy), our next-gen file uploader for the web.
 
 ## Migrating between plans
 
