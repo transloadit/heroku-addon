@@ -213,7 +213,7 @@ production:
 Alright, time to create our upload form. In order to do that, please open
 `app/views/uploads/new.html.erb`, and put the following code in:
 
-```erb
+```html
 <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' %>
 
 <h1>Upload an image</h1>
@@ -230,7 +230,7 @@ Alright, time to create our upload form. In order to do that, please open
 With this in place, we can modify the `app/views/uploads/create.html.erb` view
 to render the uploaded and resized image:
 
-```erb
+```html
 <h1>Resized upload image</h1>
 <%= image_tag params[:transloadit][:results][:resize].first[:url] %>
 ```
