@@ -32,7 +32,7 @@ $ heroku addons:add transloadit
 A list of all plans available can be found <a href="https://addons.heroku.com/transloadit">here</a>.
 </div>
 
-Once Transloadit has been added the `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` settings will be available in the app configuration and will contain the credentials needed to authenticate to the [Transloadit API](https://transloadit.com/docs/api-docs/). This can be confirmed using the `heroku config:get` command.
+Once Transloadit has been added the `TRANSLOADIT_AUTH_KEY` and `TRANSLOADIT_SECRET_KEY` settings will be available in the app configuration and will contain the credentials needed to authenticate to the [Transloadit API](https://transloadit.com/docs/api/). This can be confirmed using the `heroku config:get` command.
 
 ```bash
 $ heroku config:get TRANSLOADIT_AUTH_KEY
@@ -78,7 +78,7 @@ $ git push heroku master
 ### First encoding job
 
 After installing the `transloadit` Gem and deploying your app you can start talking to
-the [Transloadit API](https://transloadit.com/docs/api-docs/):
+the [Transloadit API](https://transloadit.com/docs/api/):
 
 
 ```ruby
