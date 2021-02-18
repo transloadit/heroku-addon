@@ -19,7 +19,9 @@ beatifully flexible and easy to use API.
 
 ## Install
 
-**Warning** Heroku does not support overage in their billing and so we had to disable that on our end to be compatible with the platform without going bankrupt. This could result in stopping the service for you if you don't upgrade in time! If you'd rather enable overage, consider signing up for Transloadit directly.
+<div class="alert alert-warning" markdown="1">
+  **Warning!** Heroku does not support overage in their billing and so we had to disable that on our end to be compatible with the platform without going bankrupt. This could result in stopping the service for you if you don't upgrade in time! If you'd rather enable overage, consider signing up for Transloadit directly.
+</div>
 
 Transloadit can be attached to a Heroku application via the CLI:
 
@@ -155,7 +157,7 @@ $ rake  db:migrate
 ```
 
 The controller generator we just executed has probably put two GET routes into
-your `config/routes.rb`. We don't want those, so lets go ahead an overwrite
+your `config/routes.rb`. We don't want those, so let's go ahead and overwrite
 them with this.
 
 ```ruby
@@ -256,7 +258,7 @@ end
 ```
 
 That's it. If you've followed the steps closely, you should now be able to
-try your first upload. Don't forget do start your rails server first:
+try your first upload. Don't forget to start your rails server first:
 
 ```bash
 $ rails server
@@ -287,7 +289,7 @@ Point your browser to `/uploads/new`
 
 Instead of talking server-to-server, your website visitors can directly upload
 to Transloadit's specialized upload servers, so in theory there's no need for
-serverside languages.
+server-side languages.
 
 The easiest way to accomplish this would be to to include our
 [jQuery SDK](https://transloadit.com/docs/#jquery-plugin) in your HTML.
