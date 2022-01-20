@@ -292,7 +292,7 @@ to Transloadit's specialized upload servers, so in theory there's no need for
 server-side languages.
 
 The easiest way to accomplish this would be to to include our
-[jQuery SDK](https://transloadit.com/docs/#jquery-plugin) in your HTML.
+[jQuery SDK](https://transloadit.com/docs/sdks/jquery-sdk/) in your HTML.
 
 It includes a Twitter Bootstrap compatible progress bar, and it saves you
 development time having to handle the file uploads yourself, and then pushing it
@@ -308,7 +308,7 @@ to our API.
 </script>
 ```
 
-Alternatively, check our [Uppy](https://transloadit.com/docs/#uppy), our next-gen file uploader for the web.
+Alternatively, check our [Uppy](https://transloadit.com/docs/sdks/uppy/), our next-gen file uploader for the web.
 
 ## Migrating between plans
 
