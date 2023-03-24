@@ -7,7 +7,7 @@ Here are the steps to partake, and make sure it works using an example ruby app.
 
 http://beta.heroku.com/
 
-## Get the `heroku` toolbelt 
+## Get the `heroku` toolbelt
 
 At https://toolbelt.heroku.com/download/osx
 
@@ -26,7 +26,7 @@ Password: your-password
 git clone git://github.com/heroku/ruby-sample.git
 cd ruby-sample
 heroku create
-git push heroku master
+git push heroku main
 heroku open
 ```
 
@@ -41,6 +41,5 @@ Use `heroku addons:docs transloadit` to view documentation.
 
 ## More information
 
-Please goto the [README.md](README.md), ask us anything on support@transloadit.com, 
+Please goto the [README.md](README.md), ask us anything on support@transloadit.com,
 send us pull requests, or reach out on [twitter](https://twitter.com/transloadit).
-

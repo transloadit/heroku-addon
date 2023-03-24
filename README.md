@@ -10,7 +10,7 @@ An **Heroku addon** for [Transloadit](https://transloadit.com)'s file uploading 
 
 [This](https://addons.heroku.com/transloadit) is an Heroku [add-on](https://addons.heroku.com) to make it easy to talk to the [Transloadit](https://transloadit.com) REST API.
 
-![Transloadit Uploads](https://s3.amazonaws.com/heroku.devcenter/heroku_assets/images/235-original.jpg "Upload any file with Transloadit")
+![Transloadit Uploads](https://s3.amazonaws.com/heroku.devcenter/heroku_assets/images/235-original.jpg 'Upload any file with Transloadit')
 
 Dealing with hundreds of different media formats and running a scalable architecture
 that can encode even the biggest files swiftly is no joke. Transloadit has spent
@@ -74,14 +74,13 @@ Finally re-deploy your application.
 ```bash
 $ git add .
 $ git commit -a -m "add transloadit instrumentation"
-$ git push heroku master
+$ git push heroku main
 ```
 
 ### First encoding job
 
 After installing the `transloadit` Gem and deploying your app you can start talking to
 the [Transloadit API](https://transloadit.com/docs/api/):
-
 
 ```ruby
 require 'transloadit'
@@ -172,21 +171,21 @@ below:
 
 ```yaml
 auth:
-  key     : <%= ENV['TRANSLOADIT_AUTH_KEY'] %>
-  secret  : <%= ENV['TRANSLOADIT_SECRET_KEY'] %>
+  key: <%= ENV['TRANSLOADIT_AUTH_KEY'] %>
+  secret: <%= ENV['TRANSLOADIT_SECRET_KEY'] %>
 
 templates:
   image_resize:
     steps:
       resize:
-        robot : '/image/resize'
+        robot: '/image/resize'
         format: 'jpg'
-        width : 320
+        width: 320
         height: 200
 ```
 
 Note that we encourage you to enable authentication in your Transloadit Account
-and put your secret into the ```config/transloadit.yml``` to have your requests
+and put your secret into the `config/transloadit.yml` to have your requests
 signed.
 
 Make your `config/database.yml` look like this:
@@ -218,17 +217,14 @@ Alright, time to create our upload form. In order to do that, please open
 `app/views/uploads/new.html.erb`, and put the following code in:
 
 ```html
-<%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' %>
+<%= javascript_include_tag
+'//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' %>
 
 <h1>Upload an image</h1>
-<%= form_for Upload.new, :html => { :id => 'upload' } do |form| %>
-  <%= transloadit :image_resize %>
-  <%= form.label      :file, 'File to upload' %>
-  <%= form.file_field :file %>
-  <%= form.submit %>
-<% end %>
-
-<%= transloadit_jquerify :upload, :wait => true %>
+<%= form_for Upload.new, :html => { :id => 'upload' } do |form| %> <%=
+transloadit :image_resize %> <%= form.label :file, 'File to upload' %> <%=
+form.file_field :file %> <%= form.submit %> <% end %> <%= transloadit_jquerify
+:upload, :wait => true %>
 ```
 
 With this in place, we can modify the `app/views/uploads/create.html.erb` view
@@ -278,7 +274,7 @@ $ heroku login
 $ heroku create
 $ heroku addons:add transloadit
 $ heroku config:get TRANSLOADIT_AUTH_KEY
-$ git push heroku master
+$ git push heroku main
 $ heroku run rake db:migrate
 $ heroku open && heroku logs --tail
 ```
@@ -299,12 +295,15 @@ development time having to handle the file uploads yourself, and then pushing it
 to our API.
 
 ```html
-<script type="text/javascript" src="//assets.transloadit.com/js/jquery.transloadit2-v3-latest.js"></script>
+<script
+  type="text/javascript"
+  src="//assets.transloadit.com/js/jquery.transloadit2-v3-latest.js"
+></script>
 <script type="text/javascript">
-   // We call .transloadit() after the DOM is initialized:
-   $(function() {
-     $('#MyForm').transloadit();
-   });
+  // We call .transloadit() after the DOM is initialized:
+  $(function () {
+    $('#MyForm').transloadit()
+  })
 </script>
 ```
 
