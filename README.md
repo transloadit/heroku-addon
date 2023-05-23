@@ -19,9 +19,8 @@ beatifully flexible and easy to use API.
 
 ## Install
 
-<div class="alert alert-warning" markdown="1">
-  **Warning!** Heroku does not support overage in their billing and so we had to disable that on our end to be compatible with the platform without going bankrupt. This could result in stopping the service for you if you don't upgrade in time! If you'd rather enable overage, consider signing up for Transloadit directly.
-</div>
+**Warning!** Heroku does not support overage in their billing and so we had to disable that on our end to be compatible with the platform without going bankrupt. This could result in stopping the service for you if you don't upgrade in time! If you'd rather enable overage, consider signing up for Transloadit directly.
+[{.alert .alert-warning}]
 
 Transloadit can be attached to a Heroku application via the CLI:
 
